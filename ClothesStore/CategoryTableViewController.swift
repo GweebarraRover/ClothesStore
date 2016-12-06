@@ -10,6 +10,8 @@ import UIKit
 
 class CategoryTableViewController: UITableViewController {
 
+    let storeManager = StoreManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
