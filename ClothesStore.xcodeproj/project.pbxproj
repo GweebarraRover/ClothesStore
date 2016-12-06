@@ -14,6 +14,7 @@
 		32DEDF561DF759FC00D7EDCB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32DEDF541DF759FC00D7EDCB /* Main.storyboard */; };
 		32DEDF581DF759FC00D7EDCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32DEDF571DF759FC00D7EDCB /* Assets.xcassets */; };
 		32DEDF5B1DF759FC00D7EDCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32DEDF591DF759FC00D7EDCB /* LaunchScreen.storyboard */; };
+		ACB4705048EFFFBB5B6B9579 /* Pods_ClothesStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B23BA117163ECE8B3C84481C /* Pods_ClothesStore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		32DEDF571DF759FC00D7EDCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32DEDF5A1DF759FC00D7EDCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32DEDF5C1DF759FC00D7EDCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AADA22C5C20A5783D9E7EE2 /* Pods-ClothesStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClothesStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClothesStore/Pods-ClothesStore.debug.xcconfig"; sourceTree = "<group>"; };
+		B23BA117163ECE8B3C84481C /* Pods_ClothesStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClothesStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5615ED1014B2E4CC003E9A3 /* Pods-ClothesStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClothesStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClothesStore/Pods-ClothesStore.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,12 +37,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB4705048EFFFBB5B6B9579 /* Pods_ClothesStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06C907F275DD0377799FE52F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B23BA117163ECE8B3C84481C /* Pods_ClothesStore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		323193551DF767F500FCF3B2 /* StoreAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -55,11 +68,20 @@
 			name = DataObjects;
 			sourceTree = "<group>";
 		};
+		324B3C9B1DF77E4E00609C67 /* DataParser */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DataParser;
+			sourceTree = "<group>";
+		};
 		32DEDF441DF759FC00D7EDCB = {
 			isa = PBXGroup;
 			children = (
 				32DEDF4F1DF759FC00D7EDCB /* ClothesStore */,
 				32DEDF4E1DF759FC00D7EDCB /* Products */,
+				E9A7FC60833840987BD4025F /* Pods */,
+				06C907F275DD0377799FE52F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +98,7 @@
 			children = (
 				32DEDF621DF75AAD00D7EDCB /* ViewControllers */,
 				323193551DF767F500FCF3B2 /* StoreAPI */,
+				324B3C9B1DF77E4E00609C67 /* DataParser */,
 				323193561DF7680500FCF3B2 /* DataObjects */,
 				32DEDF631DF75AC200D7EDCB /* SupportingFiles */,
 			);
@@ -102,6 +125,15 @@
 			name = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		E9A7FC60833840987BD4025F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3AADA22C5C20A5783D9E7EE2 /* Pods-ClothesStore.debug.xcconfig */,
+				D5615ED1014B2E4CC003E9A3 /* Pods-ClothesStore.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32DEDF5F1DF759FC00D7EDCB /* Build configuration list for PBXNativeTarget "ClothesStore" */;
 			buildPhases = (
+				885C2466E40D3C4EA5787BED /* [CP] Check Pods Manifest.lock */,
 				32DEDF491DF759FC00D7EDCB /* Sources */,
 				32DEDF4A1DF759FC00D7EDCB /* Frameworks */,
 				32DEDF4B1DF759FC00D7EDCB /* Resources */,
+				974F5BB978EAE31749157042 /* [CP] Embed Pods Frameworks */,
+				A9FC5D10B69D4FFC8F8A9E8A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +203,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		885C2466E40D3C4EA5787BED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		974F5BB978EAE31749157042 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClothesStore/Pods-ClothesStore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9FC5D10B69D4FFC8F8A9E8A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ClothesStore/Pods-ClothesStore-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		32DEDF491DF759FC00D7EDCB /* Sources */ = {
@@ -298,6 +381,7 @@
 		};
 		32DEDF601DF759FC00D7EDCB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AADA22C5C20A5783D9E7EE2 /* Pods-ClothesStore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ClothesStore/Info.plist;
@@ -310,6 +394,7 @@
 		};
 		32DEDF611DF759FC00D7EDCB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5615ED1014B2E4CC003E9A3 /* Pods-ClothesStore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ClothesStore/Info.plist;
