@@ -8,5 +8,6 @@ target 'ClothesStore' do
   # Pods for ClothesStore
 
 	pod 'SwiftyJSON', '3.0.0'
+	pod 'Alamofire', '~> 4.0'
 	
 end
