@@ -35,10 +35,41 @@
                     <navigationItem key="navigationItem" id="brV-Yr-dhI">
                         <barButtonItem key="rightBarButtonItem" title="Menu" id="VLi-7y-pnW"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="Htb-Hm-8M4" kind="show" identifier="showCategory" id="oyp-l2-vZT"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMd-fv-RFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="820" y="-9.4452773613193415"/>
+        </scene>
+        <!--Products List Table View Controller-->
+        <scene sceneID="Nl0-qV-OXd">
+            <objects>
+                <tableViewController id="Htb-Hm-8M4" customClass="ProductsListTableViewController" customModule="ClothesStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xwm-Dc-TMr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="e84-mi-X14">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e84-mi-X14" id="bso-mN-V3W">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Htb-Hm-8M4" id="Q4j-Ee-qT2"/>
+                            <outlet property="delegate" destination="Htb-Hm-8M4" id="EM8-SG-o33"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qb-cA-vWV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1954" y="-9"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6QE-F3-KhD">
