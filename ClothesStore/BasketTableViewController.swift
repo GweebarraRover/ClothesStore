@@ -62,6 +62,7 @@ class BasketTableViewController: BaseTableViewController, BasketCellDelegate {
     func removeFromBasket(product: Product) {
         deleteFromCache(deleteProduct: product, key: basketKey)
         basket = cacheProducts(key: basketKey)
+        storeManager.deleteProductFromBasket(product: product)
         tableView.reloadData()
     }
 

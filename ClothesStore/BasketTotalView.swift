@@ -18,6 +18,10 @@ class BasketTotalView: UIView {
     }
 
     func displayTotalFor(products: [Product]?) {
+        totalAmount.attributedText = attributeStringWithCurrency(symobol: "£", amount: totalForProducts(products: products), strikeThrough: false)
+    }
+    
+    func totalForProducts(products: [Product]?) -> Double {
         if products != nil {
             var total = 0.00
             for product in products! {
@@ -25,8 +29,9 @@ class BasketTotalView: UIView {
                     total += product.price!
                 }
             }
-            totalAmount.attributedText = attributeStringWithCurrency(symobol: "£", amount: total, strikeThrough: false)
+            return total
         }
+        return 0.00
     }
     
 }

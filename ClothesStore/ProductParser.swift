@@ -12,32 +12,31 @@ import SwiftyJSON
 class ProductParser: NSObject {
 
     var products = [Product]()
-    
-    init(jsonData: JSON) {
-        super.init()
-        for productData in jsonData {
-            let product = Product(json: productData.1)
-            products.append(product)
-        }
-        self.productCategories()
-    }
-    
     var categories = [[Product]]()
 
-    func productCategories() {
-        for product in products {
-            insertIntoCategory(product: product)
+    init(jsonData: JSON?) {
+        super.init()
+        if jsonData != nil {
+            for productData in jsonData! {
+                let product = Product(json: productData.1)
+                products.append(product)
+            }
         }
+        categories = sortedCategory(products: products)
     }
     
-    func insertIntoCategory(product: Product) {
-        
-        if !categories.indices.contains(product.type.hashValue) {
-            categories.append([product])
+    func sortedCategory(products: [Product]) -> [[Product]] {
+
+        var sortedCategories = [[Product]]()
+        for product in products {
+            if !sortedCategories.indices.contains(product.type.hashValue) {
+                sortedCategories.append([product])
+            }
+            else {
+                sortedCategories[product.type.hashValue].append(product)
+            }
         }
-        else {
-            categories[product.type.hashValue].append(product)
-        }
+        return sortedCategories
     }
     
 
