@@ -17,6 +17,8 @@
 		321C913D1DF999D5001DC16C /* BasketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 321C913B1DF999D5001DC16C /* BasketTableViewCell.xib */; };
 		321C913F1DF9A3F4001DC16C /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C913E1DF9A3F4001DC16C /* ColorExtensions.swift */; };
 		321C91421DF9B967001DC16C /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C91411DF9B967001DC16C /* AlertView.swift */; };
+		321C914A1DFAB611001DC16C /* ClothesStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C91491DFAB611001DC16C /* ClothesStoreTests.swift */; };
+		321C91531DFABA0E001DC16C /* ProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321C91521DFABA0E001DC16C /* ProductTests.swift */; };
 		323193581DF7682B00FCF3B2 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323193571DF7682B00FCF3B2 /* StoreManager.swift */; };
 		3231935A1DF7683A00FCF3B2 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 323193591DF7683A00FCF3B2 /* Product.swift */; };
 		3231935C1DF768D500FCF3B2 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3231935B1DF768D500FCF3B2 /* CategoryTableViewController.swift */; };
@@ -40,6 +42,16 @@
 		ACB4705048EFFFBB5B6B9579 /* Pods_ClothesStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B23BA117163ECE8B3C84481C /* Pods_ClothesStore.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		321C914C1DFAB611001DC16C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32DEDF451DF759FC00D7EDCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32DEDF4C1DF759FC00D7EDCB;
+			remoteInfo = ClothesStore;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		321C912A1DF96AD0001DC16C /* StoreCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCache.swift; sourceTree = "<group>"; };
 		321C912C1DF96DCB001DC16C /* WishlistTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WishlistTableViewCell.swift; sourceTree = "<group>"; };
@@ -51,6 +63,10 @@
 		321C913B1DF999D5001DC16C /* BasketTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasketTableViewCell.xib; sourceTree = "<group>"; };
 		321C913E1DF9A3F4001DC16C /* ColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		321C91411DF9B967001DC16C /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		321C91471DFAB611001DC16C /* ClothesStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClothesStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		321C91491DFAB611001DC16C /* ClothesStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesStoreTests.swift; sourceTree = "<group>"; };
+		321C914B1DFAB611001DC16C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		321C91521DFABA0E001DC16C /* ProductTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTests.swift; sourceTree = "<group>"; };
 		323193571DF7682B00FCF3B2 /* StoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		323193591DF7683A00FCF3B2 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		3231935B1DF768D500FCF3B2 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +95,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		321C91441DFAB611001DC16C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		32DEDF4A1DF759FC00D7EDCB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,6 +162,16 @@
 				321C91411DF9B967001DC16C /* AlertView.swift */,
 			);
 			name = AlertView;
+			sourceTree = "<group>";
+		};
+		321C91481DFAB611001DC16C /* ClothesStoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				321C91491DFAB611001DC16C /* ClothesStoreTests.swift */,
+				321C914B1DFAB611001DC16C /* Info.plist */,
+				321C91521DFABA0E001DC16C /* ProductTests.swift */,
+			);
+			path = ClothesStoreTests;
 			sourceTree = "<group>";
 		};
 		323193551DF767F500FCF3B2 /* StoreAPI */ = {
@@ -219,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				32DEDF4F1DF759FC00D7EDCB /* ClothesStore */,
+				321C91481DFAB611001DC16C /* ClothesStoreTests */,
 				32DEDF4E1DF759FC00D7EDCB /* Products */,
 				E9A7FC60833840987BD4025F /* Pods */,
 				06C907F275DD0377799FE52F /* Frameworks */,
@@ -229,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				32DEDF4D1DF759FC00D7EDCB /* ClothesStore.app */,
+				321C91471DFAB611001DC16C /* ClothesStoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -294,6 +329,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		321C91461DFAB611001DC16C /* ClothesStoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 321C914E1DFAB611001DC16C /* Build configuration list for PBXNativeTarget "ClothesStoreTests" */;
+			buildPhases = (
+				321C91431DFAB611001DC16C /* Sources */,
+				321C91441DFAB611001DC16C /* Frameworks */,
+				321C91451DFAB611001DC16C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				321C914D1DFAB611001DC16C /* PBXTargetDependency */,
+			);
+			name = ClothesStoreTests;
+			productName = ClothesStoreTests;
+			productReference = 321C91471DFAB611001DC16C /* ClothesStoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		32DEDF4C1DF759FC00D7EDCB /* ClothesStore */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 32DEDF5F1DF759FC00D7EDCB /* Build configuration list for PBXNativeTarget "ClothesStore" */;
@@ -324,6 +377,11 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = KeelinDevenney;
 				TargetAttributes = {
+					321C91461DFAB611001DC16C = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 32DEDF4C1DF759FC00D7EDCB;
+					};
 					32DEDF4C1DF759FC00D7EDCB = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
@@ -344,11 +402,19 @@
 			projectRoot = "";
 			targets = (
 				32DEDF4C1DF759FC00D7EDCB /* ClothesStore */,
+				321C91461DFAB611001DC16C /* ClothesStoreTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		321C91451DFAB611001DC16C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		32DEDF4B1DF759FC00D7EDCB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -416,6 +482,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		321C91431DFAB611001DC16C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				321C914A1DFAB611001DC16C /* ClothesStoreTests.swift in Sources */,
+				321C91531DFABA0E001DC16C /* ProductTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		32DEDF491DF759FC00D7EDCB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -446,6 +521,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		321C914D1DFAB611001DC16C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 32DEDF4C1DF759FC00D7EDCB /* ClothesStore */;
+			targetProxy = 321C914C1DFAB611001DC16C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		32DEDF541DF759FC00D7EDCB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -466,6 +549,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		321C914F1DFAB611001DC16C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ClothesStoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KD.ClothesStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClothesStore.app/ClothesStore";
+			};
+			name = Debug;
+		};
+		321C91501DFAB611001DC16C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ClothesStoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KD.ClothesStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClothesStore.app/ClothesStore";
+			};
+			name = Release;
+		};
 		32DEDF5D1DF759FC00D7EDCB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -588,6 +697,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		321C914E1DFAB611001DC16C /* Build configuration list for PBXNativeTarget "ClothesStoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				321C914F1DFAB611001DC16C /* Debug */,
+				321C91501DFAB611001DC16C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		32DEDF481DF759FC00D7EDCB /* Build configuration list for PBXProject "ClothesStore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -28,7 +28,7 @@ class Product: NSObject, NSCoding {
     var productId: Int?
     var name: String?
     var category: String?
-    var type: categoryType
+    var type: categoryType!
     
     var price: Double?
     var oldPrice: Double?
@@ -37,28 +37,31 @@ class Product: NSObject, NSCoding {
     var wishlisted: Bool?
     
     var inBasket: Bool?
-
-    required init(json: JSON) {
-        productId = json["productId"].int
-        name = json["name"].string
-        category = json["category"].string
-        if categoryType.init(rawValue: category!) == nil {
-            type = categoryType.init()
+    
+    required init(json: JSON?) {
+        productId = json?["productId"].int
+        name = json?["name"].string
+        category = json?["category"].string
+        if category != nil {
+            if categoryType.init(rawValue: category!) == nil {
+                type = categoryType.init()
+            }
+            else {
+                type = categoryType.init(rawValue: category!)!
+            }
         }
-        else {
-            type = categoryType.init(rawValue: category!)!
-        }
-        price = json["price"].double
-        oldPrice = json["oldPrice"].double
-        quantity = json["stock"].int
+        price = json?["price"].double
+        oldPrice = json?["oldPrice"].double
+        quantity = json?["stock"].int
     }
     
     required init(coder aDecoder: NSCoder) {
         self.productId = aDecoder.decodeObject(forKey: "productId") as? Int
         self.name = aDecoder.decodeObject(forKey: "name") as? String
         self.category = aDecoder.decodeObject(forKey: "category") as? String
-        let rawType = aDecoder.decodeObject(forKey: "type") as? String
-        self.type = categoryType.init(rawValue: rawType!)!
+        if let rawType = aDecoder.decodeObject(forKey: "type") as? String {
+            self.type = categoryType.init(rawValue: rawType)!
+        }
         self.price = aDecoder.decodeObject(forKey: "price") as? Double
         self.oldPrice = aDecoder.decodeObject(forKey: "oldPrice") as? Double
         self.quantity = aDecoder.decodeObject(forKey: "quantity") as? Int
