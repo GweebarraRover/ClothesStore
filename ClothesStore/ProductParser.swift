@@ -26,11 +26,11 @@ class ProductParser: NSObject {
 
     func productCategories() {
         for product in products {
-            insertProductIntoCategory(product: product)
+            insertIntoCategory(product: product)
         }
     }
     
-    func insertProductIntoCategory(product: Product) {
+    func insertIntoCategory(product: Product) {
         
         if !categories.indices.contains(product.type.hashValue) {
             categories.append([product])

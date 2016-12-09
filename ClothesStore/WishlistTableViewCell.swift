@@ -1,29 +1,33 @@
 //
-//  ProductTableViewCell.swift
+//  WishlistTableViewCell.swift
 //  ClothesStore
 //
-//  Created by Keelin Devenney on 07/12/2016.
+//  Created by Keelin Devenney on 08/12/2016.
 //  Copyright © 2016 KeelinDevenney. All rights reserved.
 //
 
 import UIKit
 
-protocol ProductCellDelegate {
-    func addToWishlist(product: Product)
+protocol WishlistCellDelegate {
     func addToBasket(product: Product)
+    func removeFromWishlist(product: Product)
 }
 
-class ProductTableViewCell: UITableViewCell {
+class WishlistTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
     
-    var delegate: ProductCellDelegate?
+    var delegate: WishlistCellDelegate?
+
     var product: Product!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productOldPrice: UILabel!
@@ -42,22 +46,14 @@ class ProductTableViewCell: UITableViewCell {
         productOldPrice.attributedText = attributeStringWithCurrency(symobol: "£", amount: product.oldPrice, strikeThrough: true)
         productNewPrice.attributedText = attributeStringWithCurrency(symobol: "£", amount: product.price, strikeThrough: false)
         productStock.text = stockStringWith(quantity: product.quantity)
-        
-        if product.wishlisted == true {
-            wishlistButton.setTitle("Remove from wishlist", for: .normal)
-        } else {
-            wishlistButton.setTitle("Add to wishlist", for: .normal)
-        }
-    }
-    
-    @IBOutlet weak var wishlistButton: ProductButton!
-    
-    @IBAction func addToWishlist() {
-        delegate?.addToWishlist(product: product)
     }
     
     @IBAction func addToBasket() {
         delegate?.addToBasket(product: product)
+    }
+    
+    @IBAction func removeFromWishlist() {
+        delegate?.removeFromWishlist(product: product)
     }
     
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Oyo-gf-7Mn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Eyw-Cf-rl2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Category Table View Controller-->
+        <!--All categories-->
         <scene sceneID="DCO-bF-f5Z">
             <objects>
                 <tableViewController id="uAT-B7-C1s" customClass="CategoryTableViewController" customModule="ClothesStore" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J55-ff-OzG" id="nOP-nc-EQA">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -32,22 +32,20 @@
                             <outlet property="delegate" destination="uAT-B7-C1s" id="KXC-NR-BQ8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="brV-Yr-dhI">
-                        <barButtonItem key="rightBarButtonItem" title="Menu" id="VLi-7y-pnW"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="All categories" id="brV-Yr-dhI"/>
                     <connections>
                         <segue destination="Htb-Hm-8M4" kind="show" identifier="showCategory" id="oyp-l2-vZT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMd-fv-RFl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="820" y="-9.4452773613193415"/>
+            <point key="canvasLocation" x="1151" y="-142"/>
         </scene>
         <!--Products List Table View Controller-->
         <scene sceneID="Nl0-qV-OXd">
             <objects>
                 <tableViewController id="Htb-Hm-8M4" customClass="ProductsListTableViewController" customModule="ClothesStore" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xwm-Dc-TMr">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xwm-Dc-TMr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -56,7 +54,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e84-mi-X14" id="bso-mN-V3W">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -69,7 +67,100 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qb-cA-vWV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1954" y="-9"/>
+            <point key="canvasLocation" x="2102" y="-143"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="3qd-rE-QcT">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="08d-pA-PIV" customClass="MenuTableViewController" customModule="ClothesStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="NJr-en-mjG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="arJ-AQ-nzp">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="arJ-AQ-nzp" id="og2-dy-43D">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="08d-pA-PIV" id="w5q-cu-CmT"/>
+                            <outlet property="delegate" destination="08d-pA-PIV" id="upo-H6-Agd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Menu" id="UOg-EL-kjN"/>
+                    <connections>
+                        <segue destination="5xk-Bk-tDB" kind="showDetail" identifier="wishlist" id="F0p-5D-JHO"/>
+                        <segue destination="Oyo-gf-7Mn" kind="showDetail" identifier="category" id="Puw-eW-0Hu"/>
+                        <segue destination="Htb-Hm-8M4" kind="showDetail" identifier="products" id="m0k-Pl-XQ2"/>
+                        <segue destination="XsI-NW-zWE" kind="showDetail" identifier="basket" id="PXJ-tv-5gg"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e45-YW-Psn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1151" y="-897"/>
+        </scene>
+        <!--My wishlist-->
+        <scene sceneID="A5w-iB-KTB">
+            <objects>
+                <tableViewController id="eDQ-fv-8Qt" customClass="WishlistViewController" customModule="ClothesStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="aJW-1d-iJR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UVa-Rj-7cK">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UVa-Rj-7cK" id="07f-4B-Wtm">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="eDQ-fv-8Qt" id="7fx-aO-xHD"/>
+                            <outlet property="delegate" destination="eDQ-fv-8Qt" id="big-fm-2iQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My wishlist" id="4iN-6f-v5V"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bI5-3K-khS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1140" y="-1624.1379310344828"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8d0-s6-oua">
+            <objects>
+                <navigationController id="QeE-Dy-Y6G" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gUG-yo-GDF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="08d-pA-PIV" kind="relationship" relationship="rootViewController" id="QaU-99-exp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BfY-xF-rhX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201" y="-897"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="d62-vF-aSh">
+            <objects>
+                <splitViewController id="Eyw-Cf-rl2" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="QeE-Dy-Y6G" kind="relationship" relationship="masterViewController" id="Vj5-Iz-dYq"/>
+                        <segue destination="Oyo-gf-7Mn" kind="relationship" relationship="detailViewController" id="LpP-fp-EVO"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="83d-jp-qSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-753" y="-571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6QE-F3-KhD">
@@ -87,7 +178,76 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ToQ-sp-h3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-119.2" y="-9.4452773613193415"/>
+            <point key="canvasLocation" x="201" y="-141"/>
+        </scene>
+        <!--My basket-->
+        <scene sceneID="rQl-wV-7Rs">
+            <objects>
+                <tableViewController id="qMM-Zm-wd7" customClass="BasketTableViewController" customModule="ClothesStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="PpR-BV-SLn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="eER-GS-ADJ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eER-GS-ADJ" id="fIy-KD-u5W">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qMM-Zm-wd7" id="7tj-Sm-tcY"/>
+                            <outlet property="delegate" destination="qMM-Zm-wd7" id="l3w-Mk-DmM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My basket" id="Z2e-s4-tCv"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePc-Br-2pN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1140" y="640.02998500749629"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TBl-5V-Qhx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5xk-Bk-tDB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fht-KO-xbh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eDQ-fv-8Qt" kind="relationship" relationship="rootViewController" id="nIS-PE-qVs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jsh-Hx-m1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200.80000000000001" y="-1624.1379310344828"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jk5-ON-ttI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XsI-NW-zWE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LSe-je-R1a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qMM-Zm-wd7" kind="relationship" relationship="rootViewController" id="S9N-7D-Ytr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gHf-kA-7iM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200.80000000000001" y="639.13043478260875"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="oyp-l2-vZT"/>
+        <segue reference="Puw-eW-0Hu"/>
+    </inferredMetricsTieBreakers>
 </document>

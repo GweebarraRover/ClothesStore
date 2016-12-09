@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BasketTotalView" customModule="ClothesStore" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9T2-1e-lB6">
+                    <rect key="frame" x="270.5" y="20" width="43" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vxx-PS-UCK">
+                    <rect key="frame" x="321.5" y="21.5" width="37.5" height="18"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Vxx-PS-UCK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="NPc-2h-Lcc"/>
+                <constraint firstItem="Vxx-PS-UCK" firstAttribute="leading" secondItem="9T2-1e-lB6" secondAttribute="trailing" constant="8" id="Ww3-1y-qQy"/>
+                <constraint firstItem="9T2-1e-lB6" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="eLp-Xw-giV"/>
+                <constraint firstAttribute="trailing" secondItem="Vxx-PS-UCK" secondAttribute="trailing" constant="16" id="kSo-kq-IMm"/>
+                <constraint firstItem="Vxx-PS-UCK" firstAttribute="leading" secondItem="9T2-1e-lB6" secondAttribute="trailing" constant="8" id="vbg-Of-bSI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="totalAmount" destination="Vxx-PS-UCK" id="O2o-0M-U7e"/>
+                <outlet property="totalLabel" destination="9T2-1e-lB6" id="yS8-nP-Wbi"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="83.5"/>
+        </view>
+    </objects>
+</document>
